@@ -18,7 +18,7 @@ const GlassPanel = ({ children, className = "", onClick }: any) => (
 
 
 
-const BioWidget = ({ artist }: any) => (
+const BioWidget = ({ artist, widget }: any) => (
   <div className="flex flex-col h-full justify-end px-6 pb-12 relative z-10 text-white w-full pr-24">
     
     {artist.upcomingEvent && (
@@ -53,7 +53,7 @@ const BioWidget = ({ artist }: any) => (
       {artist.bio}
     </p>
 
-    <div className="flex flex-wrap gap-2">
+    <div className="flex flex-wrap gap-2 mb-6">
       <span className="bg-white/10 backdrop-blur-md border border-white/20 text-white text-xs font-bold tracking-wide px-4 py-2 rounded-full flex items-center gap-2 hover:bg-white/20 transition-colors cursor-pointer" onClick={e => e.stopPropagation()}>
         🎵 Music
       </span>
@@ -66,6 +66,18 @@ const BioWidget = ({ artist }: any) => (
         </span>
       )}
     </div>
+
+    {/* TESTIMONIOS */}
+    {widget.testimonials && widget.testimonials.length > 0 && (
+      <div className="flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide">
+        {widget.testimonials.map((test: any, i: number) => (
+          <div key={i} className="snap-center shrink-0 w-64 bg-black/40 backdrop-blur-md border border-white/10 rounded-2xl p-4 shadow-lg">
+             <p className="text-white/90 text-xs italic mb-3">"{test.quote}"</p>
+             <p className="text-white/50 text-[10px] font-bold uppercase tracking-widest">— {test.author}</p>
+          </div>
+        ))}
+      </div>
+    )}
   </div>
 );
 
