@@ -8,6 +8,12 @@
       "primaryColor": "emerald-600",
       "secondaryColor": "yellow-600"
     },
+    "upcomingEvent": {
+      "title": "Concierto Raíces - Gran Cierre",
+      "date": "Sábado 24 de Noviembre",
+      "location": "Teatro El Ensueño, Bogotá",
+      "ticketLink": "https://wa.me/1234567890?text=Quiero%20boletas"
+    },
     "bio": "Cantautor y aprendiz de la selva desde Florencia, Caquetá. Integra cantos ancestrales, saberes amazónicos y la cultura del Yagé con lenguajes contemporáneos. Un viaje sonoro de sanación y respeto por la madre naturaleza.",
     "isTouring": true,
     "widgets": [

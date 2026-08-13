@@ -16,11 +16,27 @@ const BioWidget = ({ artist, widget }: any) => (
       <h1 className="text-5xl sm:text-6xl font-display font-black tracking-tight text-white mb-2 leading-tight">
         {artist.name}
       </h1>
-      <h2 className="text-xl sm:text-2xl font-bold text-zinc-300 mb-6">
+      <h2 className="text-xl sm:text-2xl font-bold text-zinc-300 mb-6 text-center">
         {artist.genre}
       </h2>
+
+      {/* Promoción de Evento Propio (Condicional) */}
+      {artist.upcomingEvent && (
+        <div className="w-full bg-gradient-to-r from-emerald-600 to-emerald-900 border border-emerald-400/30 p-5 rounded-3xl mb-6 shadow-2xl relative overflow-hidden group cursor-pointer" onClick={(e) => { e.stopPropagation(); window.open(artist.upcomingEvent.ticketLink, '_blank'); }}>
+          <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors" />
+          <div className="relative z-10 text-center">
+            <span className="bg-red-500 text-white text-[10px] font-black uppercase tracking-widest px-2 py-1 rounded-full absolute -top-2 -right-2 animate-pulse shadow-lg">Próximo Show</span>
+            <h3 className="font-display font-black text-2xl text-white mb-1 leading-tight">{artist.upcomingEvent.title}</h3>
+            <p className="text-emerald-100 text-sm font-medium mb-3">📅 {artist.upcomingEvent.date} • 📍 {artist.upcomingEvent.location}</p>
+            <button className="w-full bg-white text-emerald-900 font-black uppercase tracking-widest text-sm py-3 rounded-xl hover:bg-zinc-200 transition-colors shadow-lg">
+              Comprar Tickets
+            </button>
+          </div>
+        </div>
+      )}
+
       <div className="bg-black/70 backdrop-blur-2xl border border-white/10 p-6 rounded-3xl shadow-2xl flex flex-col items-center">
-        {artist.isTouring && (
+        {artist.isTouring && !artist.upcomingEvent && (
           <div className="flex gap-3 items-center bg-white/10 px-4 py-2 rounded-full border border-white/5 mb-4 w-full justify-center">
             <span className="w-2.5 h-2.5 rounded-full bg-green-500 animate-pulse" aria-hidden="true" />
             <span className="text-sm font-bold text-white uppercase tracking-wider">Tour Activo</span>

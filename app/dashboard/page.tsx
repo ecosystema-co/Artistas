@@ -4,7 +4,7 @@ import { useState } from "react";
 import db from "../../data/artist-db.json";
 
 export default function DashboardPage() {
-  const [activeTab, setActiveTab] = useState<"quotes" | "reviews">("quotes");
+  const [activeTab, setActiveTab] = useState<"quotes" | "reviews" | "events">("quotes");
   
   const artist = db.artist;
   const quotes = db.quotes;
@@ -58,7 +58,7 @@ export default function DashboardPage() {
         </div>
 
         {/* Tabs */}
-        <div className="flex gap-8 border-b border-white/10 mb-8">
+        <div className="flex gap-8 border-b border-white/10 mb-8 overflow-x-auto whitespace-nowrap">
           <button 
             onClick={() => setActiveTab("quotes")}
             className={`pb-4 font-bold tracking-wide transition-colors relative ${activeTab === "quotes" ? "text-white" : "text-zinc-500 hover:text-zinc-300"}`}
@@ -72,6 +72,13 @@ export default function DashboardPage() {
           >
             Aprobación de Reseñas
             {activeTab === "reviews" && <div className="absolute bottom-0 left-0 w-full h-0.5 bg-emerald-500 rounded-t-full" />}
+          </button>
+          <button 
+            onClick={() => setActiveTab("events")}
+            className={`pb-4 font-bold tracking-wide transition-colors relative ${activeTab === "events" ? "text-emerald-400" : "text-zinc-500 hover:text-emerald-400/70"}`}
+          >
+            Mis Eventos (Autogestión)
+            {activeTab === "events" && <div className="absolute bottom-0 left-0 w-full h-0.5 bg-emerald-500 rounded-t-full shadow-[0_0_10px_rgba(16,185,129,0.8)]" />}
           </button>
         </div>
 
@@ -129,6 +136,50 @@ export default function DashboardPage() {
                   </div>
                 ))
               )}
+            </div>
+          )}
+
+          {/* EVENTS TAB (Autogestión) */}
+          {activeTab === "events" && (
+            <div className="flex flex-col gap-6">
+              <div className="bg-gradient-to-br from-emerald-900/20 to-black border border-emerald-500/30 p-8 rounded-2xl">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
+                  <div>
+                    <h3 className="text-2xl font-display font-black text-white mb-2">Evento Destacado</h3>
+                    <p className="text-zinc-400 text-sm">Este evento aparecerá en la primera historia de tu Smart EPK.</p>
+                  </div>
+                  <label className="relative inline-flex items-center cursor-pointer">
+                    <input type="checkbox" className="sr-only peer" defaultChecked={!!artist.upcomingEvent} />
+                    <div className="w-11 h-6 bg-zinc-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-zinc-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-emerald-500"></div>
+                    <span className="ml-3 text-sm font-bold text-white uppercase tracking-widest">Activo</span>
+                  </label>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label className="block text-xs font-bold uppercase text-zinc-400 mb-2">Nombre del Evento</label>
+                    <input type="text" defaultValue={artist.upcomingEvent?.title} className="w-full bg-black/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-emerald-500" />
+                  </div>
+                  <div>
+                    <label className="block text-xs font-bold uppercase text-zinc-400 mb-2">Fecha y Hora</label>
+                    <input type="text" defaultValue={artist.upcomingEvent?.date} className="w-full bg-black/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-emerald-500" />
+                  </div>
+                  <div>
+                    <label className="block text-xs font-bold uppercase text-zinc-400 mb-2">Lugar / Ciudad</label>
+                    <input type="text" defaultValue={artist.upcomingEvent?.location} className="w-full bg-black/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-emerald-500" />
+                  </div>
+                  <div>
+                    <label className="block text-xs font-bold uppercase text-zinc-400 mb-2">Link de Venta (WhatsApp o Boletería)</label>
+                    <input type="url" defaultValue={artist.upcomingEvent?.ticketLink} className="w-full bg-black/50 border border-white/10 rounded-xl px-4 py-3 text-emerald-400 focus:outline-none focus:border-emerald-500" />
+                  </div>
+                </div>
+
+                <div className="mt-8 flex justify-end">
+                   <button className="bg-emerald-600 text-white font-bold px-8 py-3 rounded-xl hover:bg-emerald-500 transition-colors shadow-lg shadow-emerald-900/50">
+                     Guardar y Publicar
+                   </button>
+                </div>
+              </div>
             </div>
           )}
 
