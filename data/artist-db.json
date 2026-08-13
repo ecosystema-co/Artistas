@@ -1,0 +1,86 @@
+{
+  "artist": {
+    "id": "nicolas-losada",
+    "name": "Nicolás Losada",
+    "genre": "Música Medicina / Ancestral",
+    "avatar": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=800&auto=format&fit=crop",
+    "theme": {
+      "primaryColor": "emerald-600",
+      "secondaryColor": "yellow-600"
+    },
+    "bio": "Cantautor y aprendiz de la selva desde Florencia, Caquetá. Integra cantos ancestrales, saberes amazónicos y la cultura del Yagé con lenguajes contemporáneos. Un viaje sonoro de sanación y respeto por la madre naturaleza.",
+    "isTouring": true,
+    "widgets": [
+      {
+        "id": "w1",
+        "type": "bio_card",
+        "title": "Bio",
+        "bgImage": "https://images.unsplash.com/photo-1516280440502-86927cc47e62?q=80&w=1200&auto=format&fit=crop",
+        "testimonials": [
+          { "quote": "Una experiencia espiritual profunda. Su música eleva y conecta.", "author": "Curador, Teatro El Ensueño" },
+          { "quote": "El mayor exponente de la música medicina en el sur de Colombia.", "author": "Festival Raíces Bogotá Andina" },
+          { "quote": "Sus presentaciones son verdaderas ceremonias de sanación.", "author": "Revista Musical Ancestral" }
+        ]
+      },
+      {
+        "id": "w2",
+        "type": "spotify_release",
+        "title": "Último Lanzamiento",
+        "bgImage": "https://images.unsplash.com/photo-1516280440502-86927cc47e62?q=80&w=1200&auto=format&fit=crop",
+        "trackName": "Nativo Sabedor",
+        "artistName": "Nicolás Losada",
+        "coverImage": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=800&auto=format&fit=crop",
+        "spotifyLink": "https://open.spotify.com/intl-es/artist/4xULXWkVIVDhPgAVY4K3q2"
+      },
+      {
+        "id": "w3",
+        "type": "youtube_video",
+        "title": "Retorno a los Ancestros",
+        "badge": "En Vivo",
+        "bgImage": "https://images.unsplash.com/photo-1516280440502-86927cc47e62?q=80&w=1200&auto=format&fit=crop",
+        "thumbnail": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=800&auto=format&fit=crop",
+        "description": "Sesión acústica con guitarras, charango y wairas honrando la memoria amazónica.",
+        "videoLink": "https://youtube.com/watch?v=..."
+      },
+      {
+        "id": "w4",
+        "type": "tour_dates",
+        "title": "Ceremonias y Conciertos",
+        "bgImage": "https://images.unsplash.com/photo-1516280440502-86927cc47e62?q=80&w=1200&auto=format&fit=crop",
+        "dates": [
+          { "month": "Oct", "day": "22", "name": "Festival Raíces", "location": "Bogotá, D.C.", "status": "Tickets" },
+          { "month": "Nov", "day": "05", "name": "Ceremonia de Sanación", "location": "Florencia, CO", "status": "Sold Out" },
+          { "month": "Dic", "day": "12", "name": "Teatro El Ensueño", "location": "Bogotá, D.C.", "status": "Tickets" }
+        ]
+      },
+      {
+        "id": "w5",
+        "type": "booking_cta",
+        "title": "Invitar a Ceremonia",
+        "bgImage": "https://images.unsplash.com/photo-1516280440502-86927cc47e62?q=80&w=1200&auto=format&fit=crop",
+        "description": "Agenda una presentación o ceremonia. Genera nuestro rider orgánico y presupuesto de viaje al instante."
+      }
+    ]
+  },
+  "quotes": [
+    {
+      "id": "q1",
+      "eventName": "Ceremonia Festival de la Tierra",
+      "location": "Pitalito, Huila",
+      "date": "2026-12-05",
+      "status": "pending",
+      "budget": "$1,200 USD",
+      "promoterName": "Juan Carlos Pérez",
+      "promoterEmail": "juan@festivaltierra.com"
+    }
+  ],
+  "reviews": [
+    {
+      "id": "r1",
+      "promoter": "Teatro El Ensueño",
+      "rating": 5,
+      "comment": "La energía que transmite Nicolás es sanadora. El público quedó fascinado con la instrumentación orgánica.",
+      "status": "pending"
+    }
+  ]
+}
