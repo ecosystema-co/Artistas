@@ -3,7 +3,7 @@
     "id": "nicolas-losada",
     "name": "Nicolás Losada",
     "genre": "Música Medicina / Ancestral",
-    "avatar": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=800&auto=format&fit=crop",
+    "avatar": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=800",
     "theme": {
       "primaryColor": "emerald-600",
       "secondaryColor": "yellow-600"
@@ -21,7 +21,7 @@
         "id": "w1",
         "type": "bio_card",
         "title": "Bio",
-        "bgImage": "https://images.unsplash.com/photo-1516280440502-86927cc47e62?q=80&w=1200&auto=format&fit=crop",
+        "bgImage": "https://images.unsplash.com/photo-1448375240586-882707db888b?q=80&w=1200",
         "testimonials": [
           { "quote": "Una experiencia espiritual profunda. Su música eleva y conecta.", "author": "Curador, Teatro El Ensueño" },
           { "quote": "El mayor exponente de la música medicina en el sur de Colombia.", "author": "Festival Raíces Bogotá Andina" },
@@ -32,10 +32,10 @@
         "id": "w2",
         "type": "spotify_release",
         "title": "Último Lanzamiento",
-        "bgImage": "https://images.unsplash.com/photo-1516280440502-86927cc47e62?q=80&w=1200&auto=format&fit=crop",
+        "bgImage": "https://images.unsplash.com/photo-1448375240586-882707db888b?q=80&w=1200",
         "trackName": "Nativo Sabedor",
         "artistName": "Nicolás Losada",
-        "coverImage": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=800&auto=format&fit=crop",
+        "coverImage": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=800",
         "spotifyLink": "https://open.spotify.com/intl-es/artist/4xULXWkVIVDhPgAVY4K3q2"
       },
       {
@@ -43,8 +43,8 @@
         "type": "youtube_video",
         "title": "Retorno a los Ancestros",
         "badge": "En Vivo",
-        "bgImage": "https://images.unsplash.com/photo-1516280440502-86927cc47e62?q=80&w=1200&auto=format&fit=crop",
-        "thumbnail": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=800&auto=format&fit=crop",
+        "bgImage": "https://images.unsplash.com/photo-1448375240586-882707db888b?q=80&w=1200",
+        "thumbnail": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=800",
         "description": "Sesión acústica con guitarras, charango y wairas honrando la memoria amazónica.",
         "videoLink": "https://youtube.com/watch?v=..."
       },
@@ -52,7 +52,7 @@
         "id": "w4",
         "type": "tour_dates",
         "title": "Ceremonias y Conciertos",
-        "bgImage": "https://images.unsplash.com/photo-1516280440502-86927cc47e62?q=80&w=1200&auto=format&fit=crop",
+        "bgImage": "https://images.unsplash.com/photo-1448375240586-882707db888b?q=80&w=1200",
         "dates": [
           { "month": "Oct", "day": "22", "name": "Festival Raíces", "location": "Bogotá, D.C.", "status": "Tickets" },
           { "month": "Nov", "day": "05", "name": "Ceremonia de Sanación", "location": "Florencia, CO", "status": "Sold Out" },
@@ -63,7 +63,7 @@
         "id": "w5",
         "type": "booking_cta",
         "title": "Invitar a Ceremonia",
-        "bgImage": "https://images.unsplash.com/photo-1516280440502-86927cc47e62?q=80&w=1200&auto=format&fit=crop",
+        "bgImage": "https://images.unsplash.com/photo-1448375240586-882707db888b?q=80&w=1200",
         "description": "Agenda una presentación o ceremonia. Genera nuestro rider orgánico y presupuesto de viaje al instante."
       }
     ]
